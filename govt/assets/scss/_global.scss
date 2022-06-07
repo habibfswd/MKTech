@@ -1,0 +1,127 @@
+// Fonts
+$ff-bn : 'Hind Siliguri', sans-serif;
+$ff-eng : 'Work Sans', sans-serif;
+
+// Sizes
+$fz-h1 : 67px;
+$fz-h2 : 51px;
+$fz-h3 : 38px;
+$fz-h4 : 28px;
+$fz-h5 : 21px;
+$fz-h6 : 16px;
+
+.h1 {
+    font-size: $fz-h1;
+}
+.h2 {
+    font-size: $fz-h2;
+}
+.h3 {
+    font-size: $fz-h3;
+}
+.h4 {
+    font-size: $fz-h4;
+}
+.h5 {
+    font-size: $fz-h5;
+}
+.h6 {
+    font-size: $fz-h6;
+}
+
+$light : 300;
+$regular : 400;
+$bold : 700;
+
+// Colors
+$c1 : hsl(150, 100%, 32%);
+$c2 : hsl(8, 100%, 59%);
+$c3 : hsl(0, 0%, 96%);
+$c4 : hsl(10, 10%, 10%);
+
+// Spaces
+.pt-60 {
+    padding-top: 60px;
+}
+.pb-60 {
+    padding-bottom: 60px;
+}
+.pt-90 {
+    padding-top: 90px;
+}
+.pb-90 {
+    padding-bottom: 90px;
+}
+.pt-120 {
+    padding-top: 120px;
+}
+.pb-120 {
+    padding-bottom: 120px;
+}
+
+// Tag Resets
+body {
+    font-family: $ff-eng;
+    color: $c4;
+}
+a {
+    text-decoration: none;
+    color: $c1;
+    &:hover {
+        color: darken($c1, 5%);
+    }
+}
+
+// Classes
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.btn-primary {
+        background-color: $c1;
+        border-color: $c1;
+        &:hover {
+            background-color: darken($c1, 5%);
+            border-color: darken($c1, 5%);
+        }
+    }
+}
+.site-logo {
+    font-size: $fz-h3;
+    font-weight: $bold;
+    max-width: 160px;
+    a {
+        color: $c4;
+        span {
+            color: $c1;
+        }
+    }
+}
+.text-bn {
+    font-family: $ff-bn;
+}
+.text-eng {
+    font-family: $ff-eng;
+}
+.section-title {
+    margin-bottom: 60px;
+    .main-title {
+        font-size: $fz-h3;
+        font-weight: $bold;
+    }
+    .sub-title {
+        max-width: 420px;
+        margin-right: auto;
+        margin-left: auto;
+        opacity: .75;
+    }
+}
+.icon-box {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}

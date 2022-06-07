@@ -1,0 +1,28 @@
+.cat-list {
+    ul {
+        margin: 0;
+        margin-bottom: 16px;
+        padding: 0;
+        list-style: none;
+        li {
+            display: flex;
+            gap: 8px;
+            font-size: $fz-h5;
+            transition: .25s linear;
+            &:hover {
+                margin-left: 8px;
+            }
+            &:before {
+                content: "\f0da";
+                font-weight: 900;
+                font-family: "Line Awesome Free";
+            }
+            a {
+                color: $c4;
+                &:hover {
+                    color: $c1;
+                }
+            }
+        }
+    }
+}
