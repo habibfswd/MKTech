@@ -1,0 +1,11 @@
+.section-title {
+    margin-bottom: 48px;
+    .main-title {
+        font-size: $fz-h2;
+        font-weight: $bold;
+    }
+    .sub-title {
+        opacity: .65;
+        font-size: $fz-h5;
+    }
+}

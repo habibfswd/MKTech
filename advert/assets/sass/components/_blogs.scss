@@ -1,0 +1,40 @@
+.blogs-slider {
+    width: 1000px;
+    .blogs-slider-single {
+        padding: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+    }
+    .blog {
+        &-thumb {
+            img {
+                max-height: 200px;
+                border-radius: 16px;
+                @media screen and (max-width: 768px) {
+                    max-height: 100%;
+                }
+            }
+        }
+        &-title {
+            font-size: $fz-h4;
+            font-weight: $bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        &-excerpt {
+            opacity: .75;
+            max-width: 360px;
+        }
+    }
+}
+.tns-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 30px;
+    button {
+        @extend .icon-box;
+        @extend .icon-box-sm;
+        border: 0;
+    }
+}

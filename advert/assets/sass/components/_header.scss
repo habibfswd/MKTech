@@ -1,0 +1,109 @@
+.site-header {
+    &-top {
+        min-height: 60px;
+        display: flex;
+        flex-basis: 100%;
+        width: 100%;
+        align-items: center;
+        border-bottom: 1px solid rgba($c-body, .1);
+    }
+    .site-logo {
+        font-family: $ff-heading;
+        font-size: $fz-h4;
+        font-weight: $bold;
+    }
+    .site-lang {
+        ul {
+            gap: 16px;
+            li {
+                cursor: pointer;
+                &:hover {
+                    color: $c1;
+                }
+                &:not(:last-child) {
+                    position: relative;
+            
+                    &:after {
+                        content: "/";
+                        position: absolute;
+                        left: calc(100% + 5px);
+                        color: $c-body;
+                    }
+                }
+            }
+        }
+    }
+    &-main {
+        min-height: 80px;
+        display: flex;
+        flex-basis: 100%;
+        width: 100%;
+        align-items: center;
+        .site-nav-menu {
+            z-index: 99;
+            @media screen and (max-width: 1199px) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 300px;
+                background-color: $c-body-bg;
+                transform: translateX(-100%);
+                transition: $trans1;
+                &.show {
+                    transform: translateX(0);
+                }
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                @media screen and (max-width: 1199px) {
+                    flex-direction: column;
+                }
+                li {
+                    @media screen and (max-width: 1199px) {
+                        flex-basis: 100%;
+                        width: 100%;
+                    }
+                    &:first-child {
+                        a {
+                            padding-left: 0;
+                            @media screen and (max-width: 1199px) {
+                                padding-left: 32px;
+                            }
+                        }
+                    }
+                    a {
+                        display: block;
+                        padding: 8px 16px;
+                        color: $c4;
+                        &:hover {
+                            color: $c1;
+                        }
+                        @media screen and (max-width: 1199px) {
+                            padding: 16px 32px;
+                        }
+                    }
+                }
+            }
+        }
+        .site-header-actions {
+            box-shadow: 0px 2px 2px rgba($c-body, .25);
+            padding: 8px 16px;
+            border-radius: 100px;
+            .btn {
+                border-radius: 100px;
+                text-transform: uppercase;
+                font-size: $fz-sm;
+                &:nth-child(1) {
+                    &:hover {
+                        background-color: rgba($c1, .1);
+                    }
+                }
+            }
+        }
+    }
+}

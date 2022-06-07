@@ -1,0 +1,147 @@
+// Variables
+$c1 : #ff6f00;
+$c2 : #644f9c;
+$c3 : #f2f2f2;
+$c4 : #404040;
+
+$c-body : $c4;
+$c-body-bg : $c3;
+
+$ff-heading : 'PT Sans', sans-serif;
+$ff-body : 'PT Sans', sans-serif;
+$regular : 400;
+$bold : 700;
+
+$fz-h1  : 67px;
+$fz-h2  : 51px;
+$fz-h3  : 38px;
+$fz-h4  : 28px;
+$fz-h5  : 21px;
+$fz-h6  : 16px;
+$fz-sm  : 14px;
+
+$trans1 : all 0.25s linear;
+
+$theme-colors : (
+    "primary" : $c1,
+    "secondary" : $c2,
+    "light" : $c2,
+    "dark" : $c3,
+);
+
+@each $color, $value in $theme-colors {
+  .bg-#{$color} {
+    background-color: $value !important;
+  }  
+}
+
+// Tag Resets
+body {
+    font-family: $ff-body;
+    color: $c4;
+}
+a {
+    text-decoration: none;
+    color: $c1;
+    &:hover {
+        color: darken($c1, $amount: 5%)
+    } 
+}
+
+// Classes
+.h1 {
+    font-size: $fz-h1;
+}
+.h2 {
+    font-size: $fz-h2;
+}
+.h3 {
+    font-size: $fz-h3;
+}
+.h4 {
+    font-size: $fz-h4;
+}
+.h5 {
+    font-size: $fz-h5;
+}
+.h6 {
+    font-size: $fz-h6;
+}
+.text-primary {
+    color: $c1 !important;
+}
+.text-secondary, .link-secondary {
+    color: $c2 !important;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+.pb-70 {
+    padding-bottom: 70px;
+}
+.pt-40 {
+    padding-top: 40px;
+}
+.pb-40 {
+    padding-bottom: 40px;
+}
+.btn {
+    padding: 10px 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 100px;
+
+    &.btn-primary {
+        background-color: $c1;
+        border-color: $c1;
+        &:hover {
+            background-color: darken($c1, 5%);
+        }
+    }
+    
+    &.btn-secondary {
+        background-color: $c2;
+        border-color: $c2;
+        &:hover {
+            background-color: darken($c2, 5%);
+        }
+    }
+}
+.icon-box {
+    height: 100px;
+    width: 100px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: $fz-h3;
+    color: $c2;
+    &-lg {
+        height: 140px;
+        width: 140px;
+        font-size: $fz-h2;
+    }
+    &-sm {
+        height: 60px;
+        width: 60px;
+        font-size: $fz-h5;
+    }
+    &-xs {
+        height: 36px;
+        width: 36px;
+        font-size: $fz-h6;
+    }
+}
+.site-logo {
+    font-size: $fz-h4;
+    font-weight: $bold;
+}
+.footer-bottom {
+    border-top: 1px solid rgba($c4, .15);
+}

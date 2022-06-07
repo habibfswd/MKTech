@@ -1,0 +1,27 @@
+.achieve-item {
+    min-height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: flex;
+    flex-basis: 300px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    @media screen and (max-width: 992px) {
+        width: 260px;
+        flex-basis: 260px;
+        min-height: 260px;
+    }
+    &.outline {
+        border: 3px dashed $c3;
+    }
+    &.light {
+        background-color: $c3;
+        color: $c2;
+    }
+    &.primary {
+        background-color: $c1;
+        color: $c3;
+    }
+}

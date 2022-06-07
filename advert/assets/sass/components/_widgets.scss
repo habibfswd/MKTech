@@ -1,0 +1,9 @@
+.menu-widget {
+    margin-bottom: 30px;
+    ul li a {
+        color: $c4;
+        &:hover {
+            color: $c1;
+        }
+    }
+}
